@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Binary Search Tree</title>
+</head>
+<body>
+    <h2>Binary Search Tree</h2>
+    <form action="search-number" method="post">
+        <label for="number">Search for a number:
+            <input type="number" id="number" name="number">
+        </label>
+        <button type="submit">Search</button>
+    </form>
+    <hr>
+
+    <p th:if="${isNumberExist}" th:text="'Number ' + ${number} + ' exist in binary search tree'"></p>
+    <p th:unless="${isNumberExist}" th:text="'Number ' + ${number} + ' does NOT exist in binary search tree'"></p>
+
+</body>
+</html>
